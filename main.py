@@ -5,26 +5,27 @@ while True:
         d = int(input('Выберите дейcтвие, введя цифру: '))
     except ValueError:
         print('Ошибка!! Введите число!!')
-    if str(d) not in '12345':
-        print('Ошибка!! Введите действительный пункт действия!!')
     else:
-        if d == 5:
-            print('До свидания!')
-            exit()
-        try:
-            a = float(input('Введите первое число (разделитель "."): '))
-            b = float(input('Введите второе число (разделитель "."): '))
-        except ValueError:
-            print('Ошибка!! Введено не число!!')
+        if str(d) not in '12345':
+            print('Ошибка!! Введите действительный пункт действия!!')
         else:
-            if d == 1:
-                print(f'Сумма = {a+b}')
-            elif d == 2:
-                print(f'Разность = {a-b}')
-            elif d == 3:
-                print(f'Произведение = {a*b}')
-            elif d == 4:
-                try:
-                    print(f'Частное = {a/b}')
-                except ZeroDivisionError:
-                    print('На ноль делить нельзя!!!')
+            if d == 5:
+                print('До свидания!')
+                exit()
+            try:
+                a = float(input('Введите первое число (разделитель "."): '))
+                b = float(input('Введите второе число (разделитель "."): '))
+            except ValueError:
+                print('Ошибка!! Введено не число!!')
+            else:
+                if d == 1:
+                    print(f'Сумма = {a+b}')
+                elif d == 2:
+                    print(f'Разность = {a-b}')
+                elif d == 3:
+                    print(f'Произведение = {a*b}')
+                elif d == 4:
+                    try:
+                        print(f'Частное = {a/b}')
+                    except ZeroDivisionError:
+                        print('На ноль делить нельзя!!!')
